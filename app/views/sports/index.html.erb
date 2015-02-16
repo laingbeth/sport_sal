@@ -1,10 +1,10 @@
 <% provide(:title, 'Sports Index') %>
-<h1>Sport Leagues</h1>
+<h1>Sports</h1>
 
 <ul>
   <% @sports.each do |sport| %>
     <li>
-      <%= link_to sport.name, sport_path(sport.id) %> | 
+      <%= link_to sport.name, sport_path(sport.id) %> 
     </li>
   <% end %>
 </ul>
