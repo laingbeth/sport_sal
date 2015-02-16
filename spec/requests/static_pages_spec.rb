@@ -1,19 +1,18 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe 'Static pages' do
+describe 'static pages' do
+  subject { page }
 
-  describe '#home' do
+  describe 'home page' do
+    before { visit root_path }
 
-    it 'describes home page' do
-      get '/static_pages#home'
-      expect(page).to have_content('Welcome to Sport$ Salaries')
-    end
+    it { should have_title('Sport$ Salary') }
   end  
 
-  describe '#about' do
-    it 'describes about page' do
-      get '/static_pages#about'
-      expect(page).to have_content('Sport$ Salaries')
-    end  
-  end
+  describe 'about page' do
+    before { visit about_path }
+
+    it { should have_title('Sport$ Salary') }
+  end  
 end
