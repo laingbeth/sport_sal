@@ -7,12 +7,12 @@ describe 'static pages' do
   describe 'home page' do
     before { visit root_path }
 
-    it { should have_title('Sport$ Salary') }
+    it { should have_title('Sport$') }
   end  
 
   describe 'about page' do
     before { visit about_path }
 
-    it { should have_title('Sport$ Salary') }
+    it { should have_title('Sport$') }
   end  
 end
