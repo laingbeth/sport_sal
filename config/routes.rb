@@ -7,10 +7,11 @@ Rails.application.routes.draw do
 
   # resources :players
   # resources :teams
-  get '/players',      to: 'players#index'
+  get '/players',     to: 'players#index'
   get '/sports',      to: 'sports#index'
   get '/teams',       to: 'teams#index'
-  
+  get '/search',      to: 'sports#index'
+  resources  :teams
 
 
   #get 'static_pages/home'

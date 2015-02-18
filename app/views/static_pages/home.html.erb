@@ -1,4 +1,14 @@
 <% provide(:title, 'Home') %>
 <h1> Sport$ Salaries</h1>
-<p> Sport$ was created to easily evaluate and compare the highest paid athletes for the current season </p>
+<p> Sport$ was created to easily evaluate and compare the highest paid athletes for major sports leagues. </p>
+
+<ul>
+  Select the sport league you want to explore:
+
+  <li> NBA | Basketball </li>
+  <li><%= link_to 'NBA | Basketball', '/search?sport=nba' %></li>
+  <li> MLB | Baseball </li>
+  <li> NHL |  Hockey </li>
+  <li> NFL |  Football </li>
+</ul>  
 

@@ -50,3 +50,6 @@ group :test do
   gem 'factory_girl_rails', '4.2.0'
   gem 'faker'
 end
+group  :production do
+  gem 'rails_12factor'
+end
