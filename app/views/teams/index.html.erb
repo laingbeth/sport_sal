@@ -6,7 +6,7 @@
   <% @teams_hash_obj.each do |team| %>
     <li>
       <% @local_team = team[1] %> 
-      <%= link_to @local_team.fullname  %> 
+      <%= link_to team_path(@local_team.fullname)  %> 
     </li>
   <% end %>
 

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/players',      to: 'players#index'
   get '/sports',      to: 'sports#index'
   get '/teams',       to: 'teams#index'
+  
 
 
   #get 'static_pages/home'

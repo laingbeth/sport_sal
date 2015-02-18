@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'httparty'
 gem 'pry'
 gem 'json'
+gem 'rubocop', '~> 0.29.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
