@@ -1,10 +1,21 @@
 <% provide(:title, 'Teams Index') %>
 <h1>Teams</h1>
 
-<ul>
-  <% @teams.each do |team| %>
+<h2>Team count:<%= @teams_hash.length %></h2>
+
+  <% @teams_hash_obj.each do |team| %>
     <li>
-      <%= link_to team.name, team_path(team.id) %> 
+      <% @local_team = team[1] %> 
+      <%= link_to @local_team.fullname  %> 
     </li>
   <% end %>
-</ul>
+
+
+
+
+
+
+
+
+
+

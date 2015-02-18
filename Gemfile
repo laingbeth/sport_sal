@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'httparty'
 gem 'pry'
+gem 'json'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -45,4 +46,6 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara'
+  gem 'factory_girl_rails', '4.2.0'
+  gem 'faker'
 end

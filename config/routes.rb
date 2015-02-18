@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/about',     to: 'static_pages#about'
   get '/home',      to: 'static_pages#home'
 
+  # resources :players
+  # resources :teams
   get '/players',      to: 'players#index'
   get '/sports',      to: 'sports#index'
   get '/teams',       to: 'teams#index'
