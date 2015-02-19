@@ -1,14 +1,17 @@
 <% provide(:title, 'Players Index') %>
 <h1>Players</h1>
 
-<h2>Salary count:<%= @salaries.count %></h2>
+<h2> Count:<%= @salaries.count %></h2>
 
 <!-- <h2>first_salary<%= @first_salary %></h2>
 <h2>Salary_2<%= @second_salary %></h2>
 <h2>Salary_3<%= @third_salary %></h2>
  -->
   <% @salaries.each do |salary| %>
-    <li>
-      <%= link_to salary["player_full_name"] %> | 
-    </li>
-  <% end %>
+      <ul>
+        <li>
+          <%= link_to salary["player_full_name"] %> | 
+          <%= link_to 'delete', player, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+      <% end %>
+    </ul>  

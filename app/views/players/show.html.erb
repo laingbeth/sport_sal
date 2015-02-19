@@ -1,0 +1,11 @@
+<% provide(:title, @player.name) %>
+<h1> @player.name </h1>
+
+<h4>Member: <%= link_to @player.user.name, user_paty(@player.user) %></h4>
+
+<!-- <dt> Player: </dt>
+<dd><%= player.name %></dd>
+<dt> Team: </dt>
+<dd><%= team_full_name %></dd>
+<dt> Salary: </dt>
+<dd><%= salary %></dd> -->

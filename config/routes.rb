@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get '/about',     to: 'static_pages#about'
-  get '/home',      to: 'static_pages#home'
+  #get '/home',      to: 'static_pages#home'
 
   # resources :players
   # resources :teams
@@ -12,7 +12,13 @@ Rails.application.routes.draw do
   get '/teams',       to: 'teams#index'
   get '/search',      to: 'sports#index'
   resources  :teams
+  resources  :players
+  resources  :users,  except: [:new]
+  resources :sessions, only: [:create]
 
+  get '/signup',      to:  'users#new'
+  get '/signin',      to:  'sessions#new'
+  delete '/signout',  to:  'sessions#destroy' 
 
   #get 'static_pages/home'
 
