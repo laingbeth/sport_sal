@@ -2,9 +2,9 @@ class User < ActiveRecord::Base
   before_save { email.downcase! }
   has_many :players
 
-  validates :name, presences: true, length: { minimum: 3, maximum: 254 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 254 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, lenght: { maximum: 254 },
+  validates :email, presence: true, length: { maximum: 254 },
             format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   has_secure_password
 

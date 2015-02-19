@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/sports',      to: 'sports#index'
   get '/teams',       to: 'teams#index'
   get '/search',      to: 'sports#index'
+ 
   resources  :teams
   resources  :players
   resources  :users,  except: [:new]
